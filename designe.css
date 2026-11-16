@@ -214,6 +214,33 @@ body {
     font-size: clamp(10px, 1.2vw, 15px);
 }
 
+.close-shows {
+    display: block;
+    margin: 16px auto;
+    padding: 10px 18px;
+    border: 0;
+    border-radius: 999px;
+    background: #242136;
+    color: #fff;
+    font: 600 14px Arial, sans-serif;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.close-shows:hover {
+    background: #874dd4;
+    transform: translateY(-1px);
+}
+
+.close-shows:focus-visible {
+    outline: 3px solid #ff6b45;
+    outline-offset: 3px;
+}
+
+.close-shows[hidden] {
+    display: none;
+}
+
 .tagline-banner {
     display: block;
     width: 88%;

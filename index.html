@@ -36,7 +36,6 @@
                 <li><a href="videos.html">Gallery</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
-            <a class="book-show" href="contact.html">Book a Show</a>
         </nav>
         <main>
             <img class="mobile-hero" src="banner.png" alt="Let the fun begin! Unforgettable moments for little stars.">
@@ -81,7 +80,34 @@
                     </div>
                 </details>
             </section>
+            <button class="close-shows" type="button" aria-controls="show-categories" hidden>Close All Shows</button>
             <img class="mobile-tagline" src="img.png" alt="Big smiles. Bigger memories.">
         </main>
+        <script>
+            const categoryCards = document.querySelectorAll(".category-card");
+            const closeShowsButton = document.querySelector(".close-shows");
+            const updateCloseButton = () => {
+                closeShowsButton.hidden = !Array.from(categoryCards).some((card) => card.open);
+            };
+
+            document.querySelector(".explore-button").addEventListener("click", () => {
+                categoryCards.forEach((card) => {
+                    card.open = true;
+                });
+                updateCloseButton();
+            });
+
+            categoryCards.forEach((card) => {
+                card.addEventListener("toggle", updateCloseButton);
+            });
+
+            closeShowsButton.addEventListener("click", () => {
+                categoryCards.forEach((card) => {
+                    card.open = false;
+                });
+                updateCloseButton();
+                categoryCards[0].querySelector("summary").focus();
+            });
+        </script>
     </body>
 </html>
