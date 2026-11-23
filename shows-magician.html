@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>IN-JOY</title>
+        <link rel="stylesheet" href="designe.css">
+    </head>
+    <body>
+        <nav class="main-nav" aria-label="Main navigation">
+            <img class="mobile-logo" src="logo.png" alt="IN-JOY Space">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li>
+                    <details class="shows-menu active">
+                        <summary>Shows &amp; Activities</summary>
+                        <div class="shows-dropdown">
+                            <h2>Birthday Packages</h2>
+                            <a href="birthday-star.html">Birthday - Star Package</a>
+                            <a href="birthday-Galaxy.html">Birthday - Galaxy Package</a>
+                            <a href="birthday-Supernova.html">Birthday - Supernova Package</a>
+                            <h2>Festivals &amp; Big Shows</h2>
+                            <a href="shows-animation.html">Animation Show</a>
+                            <a href="shows-fire.html">Fire Show</a>
+                            <a href="shows-led.html">LED Show</a>
+                            <h2>Interactive &amp; Special Acts</h2>
+                            <a href="shows-stilt-walker.html">Stilt Walker</a>
+                            <a href="showsjuggling.html">Juggling Act</a>
+                            <a href="shows-acrobat.html">Acrobat Show</a>
+                            <a class="t-active" href="shows-magician.html">Magician Show</a>
+                            <a href="shows-science.html">Science Show</a>
+                        </div>
+                    </details>
+                </li>
+                <li><a href="videos.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <script>
+            sessionStorage.setItem("selectedShow", location.pathname.split("/").pop());
+        </script>

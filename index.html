@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>IN-JOY</title>
         <link rel="stylesheet" href="designe.css">
+        <script src="js.js" defer></script>
     </head>
     <body>
         <nav class="main-nav" aria-label="Main navigation">
@@ -49,10 +50,18 @@
                         <img src="birthday.png" alt="Birthday Packages">
                     </summary>
                     <div class="shows-dropdown">
-                        <h2>Birthday Packages</h2>
-                        <a href="birthday-star.html">Birthday - Star Package</a>
-                        <a href="birthday-Galaxy.html">Birthday - Galaxy Package</a>
-                        <a href="birthday-Supernova.html">Birthday - Supernova Package</a>
+                        <div class="show-item">
+                            <img class="show-thumbnail" src="star.png" alt="Star-img">
+                            <a href="birthday-star.html">Birthday - Star Package</a>
+                        </div>
+                        <div class="show-item">
+                            <img class="show-thumbnail" src="saturn.png" alt="Galaxy-img">
+                            <a href="birthday-Galaxy.html">Birthday - Galaxy Package</a>
+                        </div>
+                        <div class="show-item">
+                            <img class="show-thumbnail" src="super.png" alt="Supernova-img">
+                            <a href="birthday-Supernova.html">Birthday - Supernova Package</a>
+                        </div>
                     </div>
                 </details>
                 <details class="category-card">
@@ -60,10 +69,18 @@
                         <img src="festivals.png" alt="Festivals and Big Shows">
                     </summary>
                     <div class="shows-dropdown">
-                        <h2>Festivals &amp; Big Shows</h2>
-                        <a href="shows-animation.html">Animation Show</a>
-                        <a href="shows-fire.html">Fire Show</a>
-                        <a href="shows-led.html">LED Show</a>
+                        <div class="show-item">
+                            <img class="show-thumbnail" src="animation.png"  alt="Animation-img">
+                            <a href="shows-animation.html">Animation Show</a>
+                        </div>
+                        <div class="show-item">
+                            <img class="show-thumbnail" src="fire.png" alt="Fire-img">
+                            <a href="shows-fire.html">Fire Show</a>
+                        </div>
+                        <div class="show-item">
+                            <img class="show-thumbnail" src="led.png" alt="LED-img">
+                            <a href="shows-led.html">LED Show</a>
+                        </div>
                     </div>
                 </details>
                 <details class="category-card">
@@ -71,43 +88,32 @@
                         <img src="interactive.png" alt="Interactive and Special Acts">
                     </summary>
                     <div class="shows-dropdown">
-                        <h2>Interactive &amp; Special Acts</h2>
-                        <a href="shows-stilt-walker.html">Stilt Walker</a>
-                        <a href="showsjuggling.html">Juggling Act</a>
-                        <a href="shows-acrobat.html">Acrobat Show</a>
-                        <a href="shows-magician.html">Magician Show</a>
-                        <a href="shows-science.html">Science Show</a>
+                        <div class="show-item">
+                            <img class="show-thumbnail" src="juggler.png" alt="Stilt Walker-img">
+                            <a href="shows-stilt-walker.html">Stilt Walker</a>
+                        </div>
+                        <div class="show-item">
+                            <img class="show-thumbnail" src="juggler_balls.png" alt="Junggling-img">
+                            <a href="showsjuggling.html">Juggling Act</a>
+                        </div>
+                        <div class="show-item">
+                            <img class="show-thumbnail" src="clown.png" alt="Acrobat-img">
+                            <a href="shows-acrobat.html">Acrobat Show</a>
+                        </div>
+                        <div class="show-item">
+                            <img class="show-thumbnail" src="magic_hat.png" alt="Magician-img">
+                            <a href="shows-magician.html">Magician Show</a>
+                        </div>
+                        <div class="show-item">
+                            <img class="show-thumbnail" src="magic_potion.png" alt="Science-img">
+                            <a href="shows-science.html">Science Show</a>
+                        </div>
                     </div>
                 </details>
             </section>
             <button class="close-shows" type="button" aria-controls="show-categories" hidden>Close All Shows</button>
             <img class="mobile-tagline" src="img.png" alt="Big smiles. Bigger memories.">
         </main>
-        <script>
-            const categoryCards = document.querySelectorAll(".category-card");
-            const closeShowsButton = document.querySelector(".close-shows");
-            const updateCloseButton = () => {
-                closeShowsButton.hidden = !Array.from(categoryCards).some((card) => card.open);
-            };
-
-            document.querySelector(".explore-button").addEventListener("click", () => {
-                categoryCards.forEach((card) => {
-                    card.open = true;
-                });
-                updateCloseButton();
-            });
-
-            categoryCards.forEach((card) => {
-                card.addEventListener("toggle", updateCloseButton);
-            });
-
-            closeShowsButton.addEventListener("click", () => {
-                categoryCards.forEach((card) => {
-                    card.open = false;
-                });
-                updateCloseButton();
-                categoryCards[0].querySelector("summary").focus();
-            });
-        </script>
+      
     </body>
 </html>
